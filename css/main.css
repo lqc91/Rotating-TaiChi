@@ -1,34 +1,45 @@
-div{
-	position:relative;
-	width:200px;
-	height:200px;
-	border:1px solid red;
-	border-radius:50%;
-	margin:200px auto;
-	background:-webkit-linear-gradient(      top, red 50%, white 50%);
-	background:   -moz-linear-gradient(   bottom, red 50%, white 50%);
-	background:     -o-linear-gradient(   bottom, red 50%, white 50%);
-	background:        linear-gradient(to bottom, red 50%, white 50%);
+div {
+	position: relative;
+	width: 200px;
+	height: 200px;
+	margin: 50px auto;
+	animation: rotation 5s linear infinite;
+	border: 1px solid red;
+	border-radius: 50%;
+	background: -webkit-linear-gradient(      top, red 50%, white 50%);
+	background:    -moz-linear-gradient(   bottom, red 50%, white 50%);
+	background:      -o-linear-gradient(   bottom, red 50%, white 50%);
+	background:         linear-gradient(to bottom, red 50%, white 50%)
 }
-div:before,div:after{
-	position:absolute;
-	top:50px;
-	display:block;
-	content:"";
-	width:100px;
-	height:100px;
-	border-radius:50%;
+div:before, div:after {
+	position: absolute;
+	top: 50px;
+	display: block;
+	width: 100px;
+	height: 100px;
+	content: '';
+	border-radius: 50%
 }
-div:before{
-	background:-webkit-radial-gradient(circle, red 15%, white 15%);
-	background:   -moz-radial-gradient(circle, red 15%, white 15%);
-	background:     -o-radial-gradient(circle, red 15%, white 15%);
-	background:        radial-gradient(circle, red 15%, white 15%);
+div:before {
+	background: -webkit-radial-gradient(circle, red 15%, white 15%);
+	background:    -moz-radial-gradient(circle, red 15%, white 15%);
+	background:      -o-radial-gradient(circle, red 15%, white 15%);
+	background:         radial-gradient(circle, red 15%, white 15%)
 }
-div:after{
-	left:100px;
-	background:-webkit-radial-gradient(circle, white 15%, red 15%);
-	background:   -moz-radial-gradient(circle, white 15%, red 15%);
-	background:     -o-radial-gradient(circle, white 15%, red 15%);
-	background:        radial-gradient(circle, white 15%, red 15%);
+div:after {
+	left: 100px;
+	background: -webkit-radial-gradient(circle, white 15%, red 15%);
+	background:    -moz-radial-gradient(circle, white 15%, red 15%);
+	background:      -o-radial-gradient(circle, white 15%, red 15%);
+	background:         radial-gradient(circle, white 15%, red 15%)
+}
+@keyframes rotation {
+	from {
+		transform: rotate(0);
+	}
+
+	to {
+		transform: rotate(360deg);
+	}
+
 }
